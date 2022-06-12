@@ -55,6 +55,8 @@ class PathAnimationView : View {
     override fun onDraw(canvas: Canvas) {
         mPaint!!.strokeWidth = mLineThickness
         mPath = createPath(mSides, mRadius.toFloat())
+        //mPaint?.pathEffect = CornerPathEffect(30F)
+        //mPaint?.pathEffect = PathDashPathEffect(mPath!!, 1F, 0F, PathDashPathEffect.Style.ROTATE)
         canvas.drawPath(mPath!!, mPaint!!)
     }
 
